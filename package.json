@@ -4,22 +4,24 @@
   "description": "Config for CCNQ4",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "prepublish": "coffee -c *.coffee.md"
+    "test": "nyc mocha",
+    "pretest": "npm run build && coffee -c test/*.coffee.md",
+    "prepublishOnly": "npm run build",
+    "build": "coffee -c *.coffee.md"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/shimaore/ccnq4-config"
+    "url": "gitlab.com/shimaore/ccnq4-config"
   },
   "author": "Stéphane Alnet <stephane@shimaore.net> (https://stephane.shimaore.net/)",
   "license": "Unlicense",
   "devDependencies": {
     "chai": "^4.1.2",
-    "coffee-coverage": "^2.0.1",
-    "coffee-script": "^1.12.7",
-    "mocha": "^4.0.1"
+    "coffeescript": "^2.4.1",
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0"
   },
   "dependencies": {
-    "tangible": "^1.9.0"
+    "tangible": "^3.0.0"
   }
 }
