@@ -1,6 +1,6 @@
 {
   "name": "ccnq4-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Config for CCNQ4",
   "main": "index.js",
   "scripts": {
